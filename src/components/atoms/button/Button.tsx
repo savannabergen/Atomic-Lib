@@ -12,4 +12,3 @@ const Button = ({ children, onClick }: ButtonProps) => {
 };
 
 export default Button;
-
