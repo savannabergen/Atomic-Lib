@@ -1,9 +1,9 @@
-import { Meta, StoryFn } from '@storybook/react';
-import Label from './label';
-import { LabelProps } from './label.types';
+import { Meta, StoryFn } from "@storybook/react";
+import Label from "./label";
+import { LabelProps } from "./label.types";
 
 export default {
-  title: 'Atoms/Label',
+  title: "Atoms/Label",
   component: Label,
 } as Meta;
 
@@ -12,14 +12,14 @@ const Template: StoryFn<LabelProps> = (args) => <Label {...args} />;
 export const Default = {
   render: Template,
   args: {
-    children: 'Default label',
+    children: "Default label",
   },
 };
 
 export const Required = {
   render: Template,
   args: {
-    children: 'Required label',
+    children: "Required label",
     required: true,
   },
 };
@@ -27,7 +27,7 @@ export const Required = {
 export const Error = {
   render: Template,
   args: {
-    children: 'Error label',
+    children: "Error label",
     error: true,
   },
 };
@@ -35,7 +35,7 @@ export const Error = {
 export const Disabled = {
   render: Template,
   args: {
-    children: 'Disabled label',
+    children: "Disabled label",
     disabled: true,
   },
 };

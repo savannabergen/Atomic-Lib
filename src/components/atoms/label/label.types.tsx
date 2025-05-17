@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
 
 export interface LabelProps {
   children: ReactNode;
@@ -9,6 +9,6 @@ export interface LabelProps {
   required?: boolean;
   disabled?: boolean;
   error?: boolean;
-  size?: 'sm' | 'md' | 'lg';
-  variant?: 'default' | 'bold' | 'italic';
+  size?: "sm" | "md" | "lg";
+  variant?: "default" | "bold" | "italic";
 }

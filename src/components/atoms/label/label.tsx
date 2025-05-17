@@ -1,4 +1,4 @@
-import type { LabelProps } from './label.types';
+import type { LabelProps } from "./label.types";
 
 const Label = ({
   children,
@@ -9,25 +9,22 @@ const Label = ({
   required,
   disabled,
   error,
-  size = 'md',
-  variant = 'default',
+  size = "md",
+  variant = "default",
 }: LabelProps) => {
   const classes = [
-    'label',
+    "label",
     size && `label-${size}`,
     variant && `label-${variant}`,
     className,
-    error && 'label-error',
-    disabled && 'label-disabled',
-  ].filter(Boolean).join(' ');
+    error && "label-error",
+    disabled && "label-disabled",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
-    <label
-      htmlFor={htmlFor}
-      className={classes}
-      style={style}
-      id={id}
-    >
+    <label htmlFor={htmlFor} className={classes} style={style} id={id}>
       {children}
       {required && <span className="label-required">*</span>}
     </label>
