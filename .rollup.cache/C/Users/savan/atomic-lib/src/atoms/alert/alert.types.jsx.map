@@ -1,0 +1,1 @@
+{"version":3,"file":"alert.types.jsx","sourceRoot":"","sources":["alert.types.tsx"],"names":[],"mappings":"","sourcesContent":["import type { ReactNode } from \"react\";\n\nexport interface AlertProps {\n  children: ReactNode;\n  type?: \"success\" | \"error\" | \"warning\" | \"info\";\n  dismissible?: boolean;\n  onDismiss?: () => void;\n  className?: string;\n}\n"]}
