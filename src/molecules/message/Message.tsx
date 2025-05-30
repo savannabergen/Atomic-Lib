@@ -11,7 +11,11 @@ export const Message = ({ message }: MessageProps) => {
         justifyContent: message.sender.id === 1 ? "flex-end" : "flex-start",
       }}
     >
-      <MessageBubble text={message.text} timestamp={message.timestamp} sender={message.sender} />
+      <MessageBubble
+        text={message.text}
+        timestamp={message.timestamp}
+        sender={message.sender}
+      />
     </div>
   );
 };
