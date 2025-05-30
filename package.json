@@ -1,6 +1,6 @@
 {
   "name": "@siavanna/atomic-lib",
-  "version": "5.2.2",
+  "version": "5.2.3",
   "description": "A library of atomic components",
   "author": "Vanna",
   "main": "dist/atomic-lib.js",
