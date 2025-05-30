@@ -57,7 +57,7 @@ export const Alert = ({
       `;
       shadowRoot.appendChild(style);
       const alertContainer = document.createElement("div");
-      alertContainer.className = `alert ${type} ${dismissible ? "dismissible" : ""} ${className || ''}`;
+      alertContainer.className = `alert ${type} ${dismissible ? "dismissible" : ""} ${className || ""}`;
       alertContainer.innerHTML = `
         <span>${children}</span>
         ${dismissible ? `<button class="dismiss-button" type="button">×</button>` : ""}

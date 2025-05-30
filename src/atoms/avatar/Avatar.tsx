@@ -1,13 +1,17 @@
 import type { AvatarProps } from "./avatar.types";
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect } from "react";
 
 const sizeClasses = {
-  small: "small",
-  medium: "medium",
-  large: "large",
+  small: "32px",
+  medium: "48px",
+  large: "64px",
 };
 
-export const Avatar = ({ src = "", alt = "", size = "medium" }: AvatarProps) => {
+export const Avatar = ({
+  src = "",
+  alt = "",
+  size = "medium",
+}: AvatarProps) => {
   const avatarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -15,29 +19,19 @@ export const Avatar = ({ src = "", alt = "", size = "medium" }: AvatarProps) => 
       const shadowRoot = avatarRef.current.attachShadow({ mode: "open" });
       const style = document.createElement("style");
       style.textContent = `
-        .avatar {
-          border-radius: 50%;
-          object-fit: cover;
-        }
-        .small {
-          width: 32px;
-          height: 32px;
-        }
-        .medium {
-          width: 48px;
-          height: 48px;
-        }
-        .large {
-          width: 64px;
-          height: 64px;
-        }
-      `;
+      img.avatar {
+        border-radius: 50%;
+        object-fit: cover;
+        width: ${sizeClasses[size]};
+        height: ${sizeClasses[size]};
+      }
+    `;
       shadowRoot.appendChild(style);
 
       const img = document.createElement("img");
       img.src = src;
       img.alt = alt;
-      img.className = `avatar ${sizeClasses[size]}`;
+      img.className = "avatar";
       shadowRoot.appendChild(img);
     }
   }, [src, alt, size]);
