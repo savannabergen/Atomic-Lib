@@ -4,4 +4,5 @@ export interface TextInputProps {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
   disabled?: boolean;
+  style?: React.CSSProperties;
 }

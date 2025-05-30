@@ -4,10 +4,14 @@ import { MessageProps } from "./message.types";
 
 export const Message = ({ message }: MessageProps) => {
   return (
-    <MessageBubble
-      text={message.text}
-      timestamp={message.timestamp}
-      sender={message.sender}
-    />
+    <div
+      style={{
+        marginBottom: "10px",
+        display: "flex",
+        justifyContent: message.sender.id === 1 ? "flex-end" : "flex-start",
+      }}
+    >
+      <MessageBubble text={message.text} timestamp={message.timestamp} sender={message.sender} />
+    </div>
   );
 };
