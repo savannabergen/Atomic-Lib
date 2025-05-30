@@ -10,9 +10,10 @@ export default {
 export const Default = () => (
   <Message
     message={{
-      text: "Hello, world!",
+      id: 1,
+      body: "Hello, world!",
       timestamp: "12:00 PM",
-      sender: { id: 1, name: "John Doe" },
+      sender: { id: 1, email: "john.doe@example.com" },
     }}
   />
 );

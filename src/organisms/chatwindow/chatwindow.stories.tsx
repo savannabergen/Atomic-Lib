@@ -12,15 +12,15 @@ export const Default = () => (
     messages={[
       {
         id: 1,
-        text: "Hello, world!",
+        body: "Hello, world!",
         timestamp: "12:00 PM",
-        sender: { id: 1, name: "John Doe" },
+        sender: { id: 1, email: "john.doe@example.com" },
       },
       {
         id: 2,
-        text: "Hi!",
+        body: "Hi!",
         timestamp: "12:01 PM",
-        sender: { id: 2, name: "Jane Doe" },
+        sender: { id: 2, email: "jane.doe@example.com" },
       },
     ]}
     onSendMessage={(text) => console.log(text)}

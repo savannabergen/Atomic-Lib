@@ -1,8 +1,5 @@
 export interface MessageBubbleProps {
-  text: string;
+  body: string;
   timestamp: string;
-  sender: {
-    id: number;
-    name: string;
-  };
+  sender: { id: number; email: string };
 }

@@ -9,24 +9,24 @@ export default {
 
 export const Default = () => (
   <MessageBubble
-    text="Hello, world!"
+    body="Hello, world!"
     timestamp="12:00 PM"
-    sender={{ id: 1, name: "John Doe" }}
+    sender={{ id: 1, email: "john.doe@example.com" }}
   />
 );
 
 export const LongMessage = () => (
   <MessageBubble
-    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex."
+    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex."
     timestamp="12:00 PM"
-    sender={{ id: 1, name: "John Doe" }}
+    sender={{ id: 1, email: "john.doe@example.com" }}
   />
 );
 
 export const DifferentSender = () => (
   <MessageBubble
-    text="Hello, world!"
+    body="Hello, world!"
     timestamp="12:00 PM"
-    sender={{ id: 2, name: "Jane Doe" }}
+    sender={{ id: 2, email: "jane.doe@example.com" }}
   />
 );

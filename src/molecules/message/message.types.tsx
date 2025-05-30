@@ -1,10 +1,8 @@
 export interface MessageProps {
   message: {
-    text: string;
+    id: number;
+    body: string;
     timestamp: string;
-    sender: {
-      id: number;
-      name: string;
-    };
+    sender: { id: number; email: string };
   };
 }

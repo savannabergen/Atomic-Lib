@@ -6,6 +6,27 @@ export default {
   component: LoginForm,
 };
 
-const Template = () => <LoginForm />;
+const formFields = {
+  email: {
+    value: "",
+    onChange: () => {},
+    placeholder: "Email",
+  },
+  password: {
+    value: "",
+    onChange: () => {},
+    placeholder: "Password",
+  },
+};
+
+const formActions = {
+  children: "Login",
+  onClick: () => {},
+  disabled: false,
+};
+
+const Template = () => (
+  <LoginForm formFields={formFields} formActions={formActions} />
+);
 
 export const Default = Template.bind({});
