@@ -7,6 +7,9 @@ export const LoginFormFields: React.FC<LoginFormFieldsProps> = ({
   email,
   password,
 }) => {
+  console.log("Email prop:", email);
+  console.log("Password prop:", password);
+
   return (
     <div>
       <div style={{ marginBottom: "10px" }}>

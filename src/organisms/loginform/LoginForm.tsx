@@ -1,36 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { LoginFormFields } from "@/molecules/loginformfields/LoginFormFields";
 import { LoginFormActions } from "@/molecules/loginformactions/LoginFormActions";
-import { LoginFormProps } from "./loginform.types";
 
-export const LoginForm: React.FC<LoginFormProps> = ({
-  formFields,
-  formActions,
-}) => {
+export const LoginForm = () => {
+  const [formFields, setFormFields] = useState({
+    email: {
+      value: "",
+      onChange: (event: React.ChangeEvent<HTMLInputElement>) => {
+        setFormFields((prevFormFields) => ({
+          ...prevFormFields,
+          email: { ...prevFormFields.email, value: event.target.value },
+        }));
+      },
+    },
+    password: {
+      value: "",
+      onChange: (event: React.ChangeEvent<HTMLInputElement>) => {
+        setFormFields((prevFormFields) => ({
+          ...prevFormFields,
+          password: { ...prevFormFields.password, value: event.target.value },
+        }));
+      },
+    },
+  });
+
+  const formActions = {
+    children: "Login",
+    onClick: () => {
+      // Handle form submission here
+    },
+  };
+
   return (
-    <form
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        padding: "20px",
-        backgroundColor: "#f7f7f7",
-        border: "1px solid #ddd",
-        borderRadius: "10px",
-      }}
-    >
-      <div style={{ flex: 1, padding: "10px" }}>
-        <LoginFormFields {...formFields} />
-      </div>
-      <div
-        style={{
-          padding: "10px 0",
-          borderTop: "1px solid #ddd",
-          display: "flex",
-          justifyContent: "flex-end",
-        }}
-      >
-        <LoginFormActions {...formActions} />
-      </div>
+    <form>
+      <LoginFormFields
+        email={formFields.email}
+        password={formFields.password}
+      />
+      <LoginFormActions {...formActions} />
     </form>
   );
 };
