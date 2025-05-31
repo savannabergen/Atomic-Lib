@@ -1,6 +1,6 @@
+import { Room } from "./types";
+
 export interface RoomListProps {
-  rooms: {
-    id: number;
-    name: string;
-  }[];
+  rooms: Room[];
+  onRoomChange: (room: Room) => void;
 }

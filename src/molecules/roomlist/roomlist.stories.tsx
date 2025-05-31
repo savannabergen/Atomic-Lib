@@ -14,5 +14,6 @@ export const Default = () => (
       { id: 2, name: "Development" },
       { id: 3, name: "Design" },
     ]}
+    onRoomChange={(room) => console.log("Room changed:", room)}
   />
 );

@@ -19,5 +19,6 @@ export const Default = () => (
       { id: 2, email: "jane.doe@example.com" },
       { id: 3, email: "bob.smith@example.com" },
     ]}
+    onRoomChange={(room) => console.log("Room changed:", room)}
   />
 );

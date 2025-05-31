@@ -1,10 +1,12 @@
+import { Room } from "@/molecules/roomlist/types";
+
+export interface Participant {
+  id: number;
+  email: string;
+}
+
 export interface SidebarProps {
-  rooms: {
-    id: number;
-    name: string;
-  }[];
-  participants: {
-    id: number;
-    email: string;
-  }[];
+  rooms: Room[];
+  participants: Participant[];
+  onRoomChange: (room: Room) => void;
 }

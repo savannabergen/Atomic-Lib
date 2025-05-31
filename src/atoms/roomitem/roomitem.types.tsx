@@ -1,7 +1,6 @@
+import { Room } from "@/molecules/roomlist/types";
+
 export interface RoomItemProps {
-  room: {
-    id: number;
-    name: string;
-  };
-  onClick?: () => void;
+  room: Room;
+  onClick?: (room: Room) => void;
 }
